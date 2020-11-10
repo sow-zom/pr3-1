@@ -180,7 +180,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ZOM\\.nuget\\packages\\": {}
+    "C:\\Users\\SOW_ZOM\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -188,11 +188,11 @@
       "projectUniqueName": "E:\\ Studies\\ 3K_2S\\ООП\\Visual Studio\\ClassLib\\ClassLib.csproj",
       "projectName": "ClassLib",
       "projectPath": "E:\\ Studies\\ 3K_2S\\ООП\\Visual Studio\\ClassLib\\ClassLib.csproj",
-      "packagesPath": "C:\\Users\\ZOM\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\SOW_ZOM\\.nuget\\packages\\",
       "outputPath": "E:\\ Studies\\ 3K_2S\\ООП\\Visual Studio\\ClassLib\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ZOM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SOW_ZOM\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -233,7 +233,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

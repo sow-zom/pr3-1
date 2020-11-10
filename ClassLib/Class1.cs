@@ -47,6 +47,7 @@ namespace ClassLib
             Console.Write("\n--------------------[7].SortWorkerBySalary()------------------");
             Console.Write("\n--------------------[8].SortWorkerByWorkExperience()----------");
             Console.Write("\n--------------------[9].Array.Sort(succ)----------------------");
+
             Console.Write("\n\n--------------------[0].Exit----------------------------------");
 
         }
@@ -76,6 +77,15 @@ namespace ClassLib
                 }
             }
         }
+        public static void Menu2()
+        {
+            Console.Write("\nСhoose currency");
+            
+            Console.Write("\n[1].Grivna");
+            Console.Write("\n[2].Dolar");
+            Console.Write("\n[3].Euro");
+        }
+        
         public static Worker[] SortWorkerByWorkExperiense(Worker[] o)
         {
             for (int j = 0; j < o.Length; j++)
@@ -126,6 +136,7 @@ namespace ClassLib
             }
 
         }
+
         public static Worker[] ReadWorkersArray()
         {
             double bts;
@@ -149,16 +160,44 @@ namespace ClassLib
                 array2.SetPosition();
                 array2.SetSalary();
                 array[i].SetWorkPlace(array2);
+                int x = -1;
+                int y= 0; 
+                while (y != 79)
+                {
+                    
+                    
+                    Menu2();
+                    Console.WriteLine("\nChoose an option >> "); x = int.Parse(Console.ReadLine());
+                    switch (x)
+                    {
+                        case 1: array[i].SetPremGrn(); y=79; break;
+                        case 2: array[i].SetPremDol(); y = 79; break;
+                        case 3: array[i].SetPremEu(); y = 79; break;
+                        default: Console.Clear(); Console.WriteLine("Erorr 404, Pls try again"); Console.WriteLine("\nClick to continue>> "); Console.ReadKey(); break;
+                    }
+                }
+                
             }
 
             return array;
         }
+
         public static void PrintWorker(Worker o)
         {
             Console.Write(o.GetName());
             Console.Write(o.GetYear());
             Console.Write(o.GetMonth());
             o.GetWorkPlace();
+           
+            Console.Write("\npr3\n");
+            
+            Console.Write("\nGetPremGrn()\n");
+            Console.Write(o.GetPremGrn());
+            Console.Write("\no.GetPremDol()\n");
+            Console.Write(o.GetPremDol());
+            Console.Write("\no.GetPremEu()\n");
+            Console.Write(o.GetPremEu());
+
         }
 
         public static void PrintWorker(Worker[] o)
@@ -228,11 +267,62 @@ namespace ClassLib
         protected string Name;
         protected int Year, Month;
         protected Company WorkPlace;
+
+        //pr3
+        private float Prem;
+        public void SetPremGrn()
+        {
+            Console.Write("\nSetPrem\n");
+            int bts;
+            while (!int.TryParse(Console.ReadLine(), out bts))
+            { Console.WriteLine("Invalid Erorr, Pls try again >>"); }
+            Console.Write("\nSetPrem\n");
+            Prem = bts;
+        }
+        public void SetPremDol()
+        {
+            Console.Write("\nSetPrem\n");
+            int bts;
+            while (!int.TryParse(Console.ReadLine(), out bts))
+            { Console.WriteLine("Invalid Erorr, Pls try again >>"); }
+            Console.Write("\nSetPrem\n");
+            Prem = bts * 28;
+        }
+        public void SetPremEu()
+        {
+            Console.Write("\nSetPrem\n");
+            int bts;
+            while (!int.TryParse(Console.ReadLine(), out bts))
+            { Console.WriteLine("Invalid Erorr, Pls try again >>"); }
+            Console.Write("\nSetPrem\n");
+            Prem = bts * 33;
+        }
+
+        public float GetPremGrn()
+        {
+            Console.Write("\n GetPremGrn\n");
+           return Prem; 
+                   
+        }
+        public float GetPremDol()
+        {
+            Console.Write("\n GetPremDol\n");
+            return Prem/28;
+
+        }
+        public float GetPremEu()
+        {
+            Console.Write("\n GetPremEu\n");
+            return Prem/33;
+        }
+
+
         public Worker()
         {
             Name = "empty";
             Year = 0;
             Month = 0;
+            Prem = 0;
             WorkPlace = new Company();
         }
         public Worker(string a, int b, int c, Company d)
